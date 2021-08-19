@@ -150,8 +150,8 @@ export const maps = [
   {
     name: "Bleasdale Farmhouse",
     url:
-      "https://static.wikia.nocookie.net/phasmophobia/images/e/e2/Bleasdale_Farmhouse.png",
-    credit: "phasmophobia wiki"
+      "https://gamedom.eu/wp-content/uploads/2020/10/Phasmophobia-Bleasdale-Farmhouse-Map-1024x576.jpg",
+    credit: "gamedom.eu"
   },
   {
     name: "Brownstone High School",
@@ -168,7 +168,7 @@ export const maps = [
   {
     name: "Asylum",
     url:
-      "https://www.yekbot.com/wp-content/uploads/2020/10/2250398267_preview_asylum-map-10-11.jpg",
-    credit: "yekbot.com"
+      "https://steamlists.com/wp-content/uploads/2021/04/Phasmophobia-Guide-to-asylum-steamlists-com.png",
+    credit: "steamlists.com"
   }
 ];
