@@ -12,7 +12,7 @@ const Results = ({ evidence }) => {
             key={i}
             style={{
               margin: "5px",
-              width: "100px",
+              minWidth: "100px",
               textTransform: "capitalize",
               display: "flex",
               justifyContent: "flex-start"

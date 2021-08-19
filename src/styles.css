@@ -83,6 +83,22 @@
   font-size: 0.7rem;
   width: 125px;
   cursor: pointer;
+  background-color: "#dee5e8";
+  transition: background-color 250ms linear;
+}
+
+.selectedButton{
+  border-radius: 5px;
+  border: none;
+  margin: 5px;
+  padding: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  width: 125px;
+  cursor: pointer;
+  background-color: #28d326;
+  transition: background-color 250ms linear;
 }
 
 .button:disabled {

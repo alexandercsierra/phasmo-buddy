@@ -1,15 +1,14 @@
 import React from "react";
 
 const Button = ({
-  background = "#dee5e8",
+  className,
   isDisabled = false,
   onClick,
   text = ""
 }) => {
   return (
     <button
-      className="button"
-      style={{ background }}
+      className={className}
       onClick={onClick}
       disabled={isDisabled}
       name={text}

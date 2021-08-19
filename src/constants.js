@@ -57,12 +57,12 @@ export const evidenceMap = {
   emf: ["shade", "phantom", "jinn", "banshee", "revenant", "oni"]
 };
 
-const evidenceVars = {
+export const evidenceVars = {
   emf: "emf",
   orbs: "orbs",
   writing: "writing",
   freezing: "freezing",
-  spirit_box: "spirit_box",
+  spirit_box: "spirit box",
   fingerprints: "fingerprints"
 };
 

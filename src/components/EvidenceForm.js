@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { evidenceMap } from "../constants";
+import { evidenceMap, evidenceVars } from "../constants";
 import { calcButtons } from "../util";
 import Button from "./Button";
 
@@ -55,7 +55,8 @@ const EvidenceForm = ({ setEvidenceState, evidenceState }) => {
         return (
           <div>
             <Button
-              background={checkboxes[evi] ? "#28d326" : "#dee5e8"}
+              className={checkboxes[evi] ? "selectedButton" : "button"}
+              // background={checkboxes[evi] ? "#28d326" : "#dee5e8"}
               isDisabled={isDisabled || shouldDisable}
               onClick={handleChange}
               text={evi}
