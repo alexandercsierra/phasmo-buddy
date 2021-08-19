@@ -4,19 +4,16 @@ import { evidenceMap, ghostMap } from "../constants";
 
 const Results = ({ evidence }) => {
   const noNones = Object.values(evidence)?.filter((evi) => evi !== "none");
+  const ghostResults = determineGhosts(evidence)
+  const isLastGhost = ghostResults?.length === 1
+
   return (
-    <div className="ghostList">
-      {determineGhosts(evidence).map((ghost, i) => {
+    <div className={`ghostList ${isLastGhost ? "finalResults" : "normalResults"}`}>
+      {ghostResults?.map((ghost, i) => {
         return (
           <div
+            className={`ghostName ${isLastGhost ? "ghostNameLast" : "ghostNameNormal"}`}
             key={i}
-            style={{
-              margin: "5px",
-              minWidth: "100px",
-              textTransform: "capitalize",
-              display: "flex",
-              justifyContent: "flex-start"
-            }}
           >
             {`${ghost}${
               noNones.length === 2

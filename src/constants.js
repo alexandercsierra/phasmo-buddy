@@ -1,62 +1,3 @@
-export const evidenceMap = {
-  none: [
-    "shade",
-    "phantom",
-    "jinn",
-    "yurei",
-    "mare",
-    "demon",
-    "banshee",
-    "revenant",
-    "oni",
-    "poltergeist",
-    "spirit",
-    "wraith",
-    "yokai",
-    "hantu"
-  ],
-  fingerprints: [
-    "banshee",
-    "revenant",
-    "poltergeist",
-    "spirit",
-    "wraith",
-    "hantu"
-  ],
-  orbs: [
-    "shade",
-    "phantom",
-    "jinn",
-    "yurei",
-    "mare",
-    "poltergeist",
-    "yokai",
-    "hantu"
-  ],
-  writing: [
-    "shade",
-    "yurei",
-    "demon",
-    "revenant",
-    "oni",
-    "spirit",
-    "yokai",
-    "hantu"
-  ],
-  freezing: ["phantom", "yurei", "demon", "mare", "banshee", "wraith"],
-  spirit_box: [
-    "jinn",
-    "mare",
-    "demon",
-    "oni",
-    "poltergeist",
-    "spirit",
-    "wraith",
-    "yokai"
-  ],
-  emf: ["shade", "phantom", "jinn", "banshee", "revenant", "oni"]
-};
-
 export const evidenceVars = {
   emf: "emf",
   orbs: "orbs",
@@ -65,16 +6,40 @@ export const evidenceVars = {
   spirit_box: "spirit box",
   fingerprints: "fingerprints"
 };
+const none = "none"
 
+export const ghostVars = {
+  shade: "shade",
+  phantom: "phantom",
+  jinn: "jinn",
+  yurei: "yurei",
+  mare: "mare",
+  demon: "demon",
+  banshee: "banshee",
+  revenant: "revenant",
+  oni: "oni",
+  poltergeist: "poltergeist",
+  spirit: "spirit",
+  wraith: "wraith",
+  yokai: "yokai",
+  hantu: "hantu",
+}
+
+const { shade, phantom, jinn, yurei, mare, demon, banshee, revenant, oni, poltergeist, spirit, wraith, yokai, hantu } = ghostVars;
 const { emf, orbs, writing, freezing, spirit_box, fingerprints } = evidenceVars;
-export const allEvidence = [
-  emf,
-  orbs,
-  writing,
-  freezing,
-  spirit_box,
-  fingerprints
-];
+
+export const evidenceMap = {
+  [none]: [ shade, phantom, jinn, yurei, mare, demon, banshee, revenant, oni, poltergeist, spirit, wraith, yokai, hantu ],
+  [fingerprints]: [ banshee, revenant, poltergeist, spirit, wraith, hantu ],
+  [orbs]: [ shade, phantom, jinn, yurei, mare, poltergeist, yokai, hantu ],
+  [writing]: [ shade, yurei, demon, revenant, oni, spirit, yokai, hantu ],
+  [freezing]: [phantom, yurei, demon, mare, banshee, wraith],
+  [spirit_box]: [ jinn, mare, demon, oni, poltergeist, spirit, wraith, yokai],
+  [emf]: [shade, phantom, jinn, banshee, revenant, oni]
+};
+
+
+export const allEvidence = [ emf, orbs, writing, freezing, spirit_box, fingerprints ];
 
 export const ghostMap = {
   shade: [emf, orbs, writing],
@@ -94,27 +59,27 @@ export const ghostMap = {
 };
 
 export const ghostInfo = {
-  shade: "shy, will not hunt with multiple people nearby",
-  phantom:
+  [shade]: "shy, will not hunt with multiple people nearby",
+  [phantom]:
     "looking at phantom will drop sanity, taking a photo of it makes it temporarily disappear",
-  jinn:
+  [jinn]:
     "will travel faster if victim is far away, turning off power stops this ability",
-  yurei:
+  [yurei]:
     "has a strong effect on sanity, smudging its room will cause it to stay put for a long time",
-  mare:
+  [mare]:
     "increased chance to attack in the dark, decreased chance to attack in the light",
-  demon:
+  [demon]:
     "will attack more often, successful questions via the Ouija Board do not lower sanity",
-  banshee: "will attack anything, targets one at a time, fears the Crucifix",
-  revenant: "very fast when hunting, hiding from it will slow it down",
-  oni: "more active with people nearby, moves objects at great speed",
-  poltergeist:
+  [banshee]: "will attack anything, targets one at a time, fears the Crucifix",
+  [revenant]: "very fast when hunting, hiding from it will slow it down",
+  [oni]: "more active with people nearby, moves objects at great speed",
+  [poltergeist]:
     "throws huge amounts of objects at once, can appear as high EMF on graph",
-  spirit: "using smudge sticks will stop its attack for a long period of time",
-  wraith:
+  [spirit]: "using smudge sticks will stop its attack for a long period of time",
+  [wraith]:
     "almost never touch the ground (no footsteps), has a toxic reaction to salt",
-  hantu: "faster in colder areas, slower in warmer areas",
-  yokai:
+  [hantu]: "faster in colder areas, slower in warmer areas",
+  [yokai]:
     "talking near it will cause it to attack more often, can only hear close voices when hunting"
 };
 
