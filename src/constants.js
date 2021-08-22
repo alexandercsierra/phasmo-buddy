@@ -1,10 +1,16 @@
+export const defaultEvidenceState = {
+  1: "none",
+  2: "none",
+  3: "none"
+}
+
 export const evidenceVars = {
-  emf: "emf",
-  orbs: "orbs",
-  writing: "writing",
-  freezing: "freezing",
-  spirit_box: "spirit box",
-  fingerprints: "fingerprints"
+  emf: "📈 emf",
+  orbs: "🔮 orbs",
+  writing: "📖 writing",
+  freezing: "🧊 freezing",
+  spirit_box: "📻 spirit box",
+  fingerprints: "🖐 fingerprints"
 };
 const none = "none"
 

@@ -6,10 +6,15 @@ const Results = ({ evidence }) => {
   const noNones = Object.values(evidence)?.filter((evi) => evi !== "none");
   const ghostResults = determineGhosts(evidence)
   const isLastGhost = ghostResults?.length === 1
+  
+
+
 
   return (
     <div className={`ghostList ${isLastGhost ? "finalResults" : "normalResults"}`}>
       {ghostResults?.map((ghost, i) => {
+        const remainingEvidence = noNones.length === 2 ? getRemainingEvidence({ noNones, ghost })[0] : ""
+        console.log({remainingEvidence: remainingEvidence.substring(0)})
         return (
           <div
             className={`ghostName ${isLastGhost ? "ghostNameLast" : "ghostNameNormal"}`}
@@ -17,7 +22,7 @@ const Results = ({ evidence }) => {
           >
             {`${ghost}${
               noNones.length === 2
-                ? " - " + getRemainingEvidence({ noNones, ghost })
+                ? " - " + remainingEvidence
                 : ""
             }`}
           </div>
@@ -30,7 +35,6 @@ const Results = ({ evidence }) => {
 export default Results;
 
 const getRemainingEvidence = ({ noNones, ghost }) => {
-  console.log({ noNones, ghost });
   const ghostEvidence = ghostMap[ghost];
 
   const remainingEvidence = ghostEvidence?.filter(

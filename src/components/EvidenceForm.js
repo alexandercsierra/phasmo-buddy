@@ -2,24 +2,25 @@ import React, { useState } from "react";
 import { evidenceMap, evidenceVars } from "../constants";
 import { calcButtons } from "../util";
 import Button from "./Button";
+import { defaultEvidenceState } from "../constants";
 
 const EvidenceForm = ({ setEvidenceState, evidenceState }) => {
-  const evidence = Object.keys(evidenceMap).filter((evi) => evi !== "none");
-  const [checkboxes, setCheckboxes] = useState({
+  const defaultCheckboxes = {
     fingerprints: false,
     emf: false,
     writing: false,
     freezing: false,
     spirit_box: false,
     orbs: false
-  });
+  }
+  const evidence = Object.keys(evidenceMap).filter((evi) => evi !== "none");
+  const [checkboxes, setCheckboxes] = useState(defaultCheckboxes);
 
   const [numChecked, setNumChecked] = useState(0);
 
   const handleChange = (e) => {
     e.preventDefault();
     let newNumChecked = numChecked;
-    console.log(checkboxes[e.target.name]);
     if (checkboxes[e.target.name]) {
       newNumChecked -= 1;
     } else {
@@ -46,6 +47,7 @@ const EvidenceForm = ({ setEvidenceState, evidenceState }) => {
     });
   };
 
+
   return (
     <div className="evidenceFormContainer">
       {evidence.map((evi) => {
@@ -64,6 +66,14 @@ const EvidenceForm = ({ setEvidenceState, evidenceState }) => {
           </div>
         );
       })}
+      <p 
+        style={{textDecoration:'underline', cursor:'pointer'}}
+        onClick={()=>{
+          setNumChecked(0)
+          setCheckboxes(defaultCheckboxes)
+          setEvidenceState(defaultEvidenceState)
+        }}
+      >reset</p>
     </div>
   );
 };
