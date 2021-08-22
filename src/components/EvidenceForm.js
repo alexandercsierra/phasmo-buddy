@@ -49,31 +49,35 @@ const EvidenceForm = ({ setEvidenceState, evidenceState }) => {
 
 
   return (
-    <div className="evidenceFormContainer">
-      {evidence.map((evi) => {
-        const isDisabled = numChecked >= 3 && !checkboxes[evi];
-        const buttons = calcButtons({ currentEvidence: evidenceState });
-        const shouldDisable = buttons.includes(evi);
-        return (
-          <div>
-            <Button
-              className={checkboxes[evi] ? "selectedButton" : "button"}
-              // background={checkboxes[evi] ? "#28d326" : "#dee5e8"}
-              isDisabled={isDisabled || shouldDisable}
-              onClick={handleChange}
-              text={evi}
-            />
-          </div>
-        );
-      })}
-      <p 
-        style={{textDecoration:'underline', cursor:'pointer'}}
-        onClick={()=>{
-          setNumChecked(0)
-          setCheckboxes(defaultCheckboxes)
-          setEvidenceState(defaultEvidenceState)
-        }}
-      >reset</p>
+    <div >
+      <div className="evidenceFormContainer">
+        {evidence.map((evi) => {
+          const isDisabled = numChecked >= 3 && !checkboxes[evi];
+          const buttons = calcButtons({ currentEvidence: evidenceState });
+          const shouldDisable = buttons.includes(evi);
+          return (
+            <div>
+              <Button
+                className={checkboxes[evi] ? "selectedButton" : "button"}
+                // background={checkboxes[evi] ? "#28d326" : "#dee5e8"}
+                isDisabled={isDisabled || shouldDisable}
+                onClick={handleChange}
+                text={evi}
+              />
+            </div>
+          );
+        })}
+      </div>
+      <div>
+        <p 
+          style={{textDecoration:'underline', cursor:'pointer'}}
+          onClick={()=>{
+            setNumChecked(0)
+            setCheckboxes(defaultCheckboxes)
+            setEvidenceState(defaultEvidenceState)
+          }}
+        >reset</p>
+      </div>
     </div>
   );
 };
