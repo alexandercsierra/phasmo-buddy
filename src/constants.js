@@ -4,14 +4,21 @@ export const defaultEvidenceState = {
   3: "none"
 }
 
+
+
+
 export const evidenceVars = {
-  emf: "📈 emf",
-  orbs: "🔮 orbs",
-  writing: "📖 writing",
-  freezing: "🧊 freezing",
-  spirit_box: "📻 spirit box",
-  fingerprints: "🖐 fingerprints"
+  emf: `emf`,
+  orbs: `orbs`,
+  writing: `writing`,
+  freezing: `freezing`,
+  spirit_box: `spirit box`,
+  fingerprints: `fingerprints`,
+  dots: `D.O.T.S.`
 };
+
+
+
 const none = "none"
 
 export const ghostVars = {
@@ -29,10 +36,31 @@ export const ghostVars = {
   wraith: "wraith",
   yokai: "yokai",
   hantu: "hantu",
+  myling: "myling",
+  goryo: "goryo"
 }
 
-const { shade, phantom, jinn, yurei, mare, demon, banshee, revenant, oni, poltergeist, spirit, wraith, yokai, hantu } = ghostVars;
-const { emf, orbs, writing, freezing, spirit_box, fingerprints } = evidenceVars;
+const { shade, phantom, jinn, yurei, mare, demon, banshee, revenant, oni, poltergeist, spirit, wraith, yokai, hantu, myling, goryo } = ghostVars;
+const { emf, orbs, writing, freezing, spirit_box, fingerprints, dots } = evidenceVars;
+
+export const evidenceEmoji = {
+  [emf]: "📈",
+  [orbs]: "🔮",
+  [writing]: "📖",
+  [freezing]: "🧊",
+  [spirit_box]: "📻",
+  [fingerprints]: "🖐",
+  [dots]: "🟢"
+}
+export const evidenceNames = {
+  emf: `${evidenceEmoji[emf]} ${emf}`,
+  orbs: `${evidenceEmoji[orbs]} ${orbs}`,
+  writing: `${evidenceEmoji[writing]} ${writing}`,
+  freezing: `${evidenceEmoji[freezing]} ${freezing}`,
+  spirit_box: `${evidenceEmoji[spirit_box]} ${spirit_box}`,
+  fingerprints: `${evidenceEmoji[fingerprints]} ${fingerprints}`,
+  dots: `${evidenceEmoji[dots]} ${dots}`
+};
 
 export const evidenceMap = {
   [none]: [ shade, phantom, jinn, yurei, mare, demon, banshee, revenant, oni, poltergeist, spirit, wraith, yokai, hantu ],
@@ -41,27 +69,30 @@ export const evidenceMap = {
   [writing]: [ shade, yurei, demon, revenant, oni, spirit, yokai, hantu ],
   [freezing]: [phantom, yurei, demon, mare, banshee, wraith],
   [spirit_box]: [ jinn, mare, demon, oni, poltergeist, spirit, wraith, yokai],
-  [emf]: [shade, phantom, jinn, banshee, revenant, oni]
+  [emf]: [shade, phantom, jinn, banshee, revenant, oni],
+  [dots]: [wraith, phantom, banshee, yurei, oni, yokai, goryo]
 };
 
 
-export const allEvidence = [ emf, orbs, writing, freezing, spirit_box, fingerprints ];
+export const allEvidence = [ emf, orbs, writing, freezing, spirit_box, fingerprints, dots ];
 
 export const ghostMap = {
-  shade: [emf, orbs, writing],
-  phantom: [emf, orbs, freezing],
-  jinn: [emf, orbs, spirit_box],
-  yurei: [orbs, writing, freezing],
-  mare: [orbs, freezing, spirit_box],
-  demon: [writing, freezing, spirit_box],
-  banshee: [emf, freezing, fingerprints],
-  revenant: [emf, writing, fingerprints],
-  oni: [emf, writing, spirit_box],
-  poltergeist: [orbs, spirit_box, fingerprints],
-  spirit: [writing, spirit_box, fingerprints],
-  wraith: [freezing, spirit_box, fingerprints],
-  hantu: [fingerprints, orbs, writing],
-  yokai: [spirit_box, orbs, writing]
+  shade: [emf, freezing, writing],
+  phantom: [spirit_box, fingerprints, dots],
+  jinn: [emf, fingerprints, freezing],
+  yurei: [orbs, dots, freezing],
+  mare: [writing, orbs, spirit_box],
+  demon: [fingerprints, freezing, writing],
+  banshee: [orbs, dots, fingerprints],
+  revenant: [orbs, writing, freezing],
+  oni: [emf, freezing, dots],
+  poltergeist: [writing, spirit_box, fingerprints],
+  spirit: [writing, spirit_box, emf],
+  wraith: [dots, spirit_box, emf],
+  hantu: [fingerprints, orbs, freezing],
+  yokai: [spirit_box, orbs, dots],
+  goryo: [emf, fingerprints, dots],
+  myling: [emf, fingerprints, writing]
 };
 
 export const ghostInfo = {
@@ -86,7 +117,9 @@ export const ghostInfo = {
     "almost never touch the ground (no footsteps), has a toxic reaction to salt",
   [hantu]: "faster in colder areas, slower in warmer areas",
   [yokai]:
-    "talking near it will cause it to attack more often, can only hear close voices when hunting"
+    "talking near it will cause it to attack more often, can only hear close voices when hunting",
+  [goryo]: "usually shows itself on camera if no one is nearby, rarely seen far from place of death",
+  [myling]: "quieter when hunting, more frequently makes paranormal sounds"
 };
 
 export const maps = [
