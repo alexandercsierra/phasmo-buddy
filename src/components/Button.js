@@ -8,12 +8,6 @@ const Button = ({
   text = ""
 }) => {
 
-  if(text==="spirit box"){
-    text = "spirit_box"
-  }
-  if(text==="D.O.T.S."){
-    text = "dots"
-  }
 
   return (
     <button

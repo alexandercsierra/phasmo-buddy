@@ -11,7 +11,8 @@ const EvidenceForm = ({ setEvidenceState, evidenceState }) => {
     writing: false,
     freezing: false,
     spirit_box: false,
-    orbs: false
+    orbs: false,
+    dots: false
   }
   const evidence = Object.keys(evidenceMap).filter((evi) => evi !== "none");
   const [checkboxes, setCheckboxes] = useState(defaultCheckboxes);

@@ -12,9 +12,9 @@ export const evidenceVars = {
   orbs: `orbs`,
   writing: `writing`,
   freezing: `freezing`,
-  spirit_box: `spirit box`,
+  spirit_box: `spirit_box`,
   fingerprints: `fingerprints`,
-  dots: `D.O.T.S.`
+  dots: `dots`
 };
 
 
@@ -43,34 +43,26 @@ export const ghostVars = {
 const { shade, phantom, jinn, yurei, mare, demon, banshee, revenant, oni, poltergeist, spirit, wraith, yokai, hantu, myling, goryo } = ghostVars;
 const { emf, orbs, writing, freezing, spirit_box, fingerprints, dots } = evidenceVars;
 
-export const evidenceEmoji = {
-  [emf]: "📈",
-  [orbs]: "🔮",
-  [writing]: "📖",
-  [freezing]: "🧊",
-  [spirit_box]: "📻",
-  [fingerprints]: "🖐",
-  [dots]: "🟢"
-}
+
 export const evidenceNames = {
-  emf: `${evidenceEmoji[emf]} ${emf}`,
-  orbs: `${evidenceEmoji[orbs]} ${orbs}`,
-  writing: `${evidenceEmoji[writing]} ${writing}`,
-  freezing: `${evidenceEmoji[freezing]} ${freezing}`,
-  spirit_box: `${evidenceEmoji[spirit_box]} ${spirit_box}`,
-  fingerprints: `${evidenceEmoji[fingerprints]} ${fingerprints}`,
-  dots: `${evidenceEmoji[dots]} ${dots}`
+  emf: `📈 ${emf}`,
+  orbs: `🔮 ${orbs}`,
+  writing: `📖 ${writing}`,
+  freezing: `🧊 ${freezing}`,
+  spirit_box: `📻 ${spirit_box}`,
+  fingerprints: `🖐 ${fingerprints}`,
+  dots: `🟢 ${dots}`
 };
 
 export const evidenceMap = {
-  [none]: [ shade, phantom, jinn, yurei, mare, demon, banshee, revenant, oni, poltergeist, spirit, wraith, yokai, hantu ],
-  [fingerprints]: [ banshee, revenant, poltergeist, spirit, wraith, hantu ],
-  [orbs]: [ shade, phantom, jinn, yurei, mare, poltergeist, yokai, hantu ],
-  [writing]: [ shade, yurei, demon, revenant, oni, spirit, yokai, hantu ],
-  [freezing]: [phantom, yurei, demon, mare, banshee, wraith],
-  [spirit_box]: [ jinn, mare, demon, oni, poltergeist, spirit, wraith, yokai],
-  [emf]: [shade, phantom, jinn, banshee, revenant, oni],
-  [dots]: [wraith, phantom, banshee, yurei, oni, yokai, goryo]
+  [none]: [ shade, phantom, jinn, yurei, mare, demon, banshee, revenant, oni, poltergeist, spirit, wraith, yokai, hantu, goryo, myling ],
+  [fingerprints]: [ myling, goryo, hantu, demon, jinn, banshee, poltergeist, phantom ],
+  [orbs]: [ yokai, hantu, yurei, revenant, mare, banshee ],
+  [writing]: [ myling, demon, shade, revenant, mare, poltergeist, spirit ],
+  [freezing]: [ hantu, oni, yurei, demon, shade, revenant, jinn ],
+  [spirit_box]: [ yokai, mare, poltergeist, phantom, wraith, spirit ],
+  [emf]: [myling, goryo, oni, shade, jinn, wraith, spirit],
+  [dots]: [ goryo, yokai, oni, yurei, banshee, phantom, wraith ]
 };
 
 
