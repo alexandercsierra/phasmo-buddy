@@ -1,14 +1,35 @@
 import { evidenceMap, ghostMap, allEvidence } from "./constants";
 
-export const determineGhosts = (evidence) => {
+
+const removeNotEvidence = (notEviList, possibleGhosts) => {
+  
+  let ghosts = []
+  possibleGhosts?.forEach(ghost=>{
+    notEviList?.forEach((evi)=>{
+        if(ghostMap[ghost].includes(evi) && !ghosts.includes(ghost)){
+          ghosts.push(ghost)
+        }
+
+    })
+  })
+
+  const filteredGhosts = possibleGhosts?.filter(ghost=>!ghosts.includes(ghost))
+
+  return filteredGhosts;
+}
+
+export const determineGhosts = (evidence, notEvidence) => {
+
   const eviArray = Object.values(evidence);
   const noNones = eviArray?.filter((evi) => evi !== "none");
   if (noNones.length === 0) {
-    return evidenceMap["none"];
+    return removeNotEvidence(notEvidence, evidenceMap["none"])
+    // return evidenceMap["none"];
   }
 
   if (noNones?.length === 1) {
-    return evidenceMap[noNones[0]];
+    return removeNotEvidence(notEvidence, evidenceMap[noNones[0]])
+    // return evidenceMap[noNones[0]];
   }
 
   const possibleGhosts = [];
@@ -36,7 +57,9 @@ export const determineGhosts = (evidence) => {
     }
   }
 
-  return finalGhosts;
+  return removeNotEvidence(notEvidence, finalGhosts)
+
+  // return finalGhosts;
 };
 
 //figure out which to disable based on current evidence

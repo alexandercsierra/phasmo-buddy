@@ -5,16 +5,18 @@ const Button = ({
   className,
   isDisabled = false,
   onClick,
-  text = ""
+  text = "",
 }) => {
 
-
+  
   return (
     <button
       className={`${className} flexStart`}
       onClick={onClick}
+      // style={{justifyContent:'space-between'}}
       disabled={isDisabled}
       name={text}
+
     >
       {evidenceNames[text]}
     </button>

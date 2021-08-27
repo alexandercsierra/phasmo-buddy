@@ -4,7 +4,7 @@ import { calcButtons } from "../util";
 import Button from "./Button";
 import { defaultEvidenceState } from "../constants";
 
-const EvidenceForm = ({ setEvidenceState, evidenceState }) => {
+const EvidenceForm = ({ setEvidenceState, evidenceState, notEvidence, setNotEvidence}) => {
   const defaultCheckboxes = {
     fingerprints: false,
     emf: false,
@@ -19,18 +19,42 @@ const EvidenceForm = ({ setEvidenceState, evidenceState }) => {
 
   const [numChecked, setNumChecked] = useState(0);
 
+
   const handleChange = (e) => {
     e.preventDefault();
+
+
     let newNumChecked = numChecked;
     if (checkboxes[e.target.name]) {
       newNumChecked -= 1;
-    } else {
+    } else if(checkboxes[e.target.name] === false) {
       newNumChecked += 1;
     }
     setNumChecked(newNumChecked);
+
+    let newBoxState;
+
+    if(checkboxes[e.target.name]){
+      newBoxState = null;
+      setNotEvidence([...notEvidence, e.target.name])
+    }
+    if(checkboxes[e.target.name] === null){
+      newBoxState = false
+      if(notEvidence.includes(e.target.name) ){
+        setNotEvidence(notEvidence.filter(evi => evi !== e.target.name))
+      }
+    }
+    if(checkboxes[e.target.name] === false){
+      newBoxState = true;
+      if(notEvidence.includes(e.target.name) ){
+        setNotEvidence(notEvidence.filter(evi => evi !== e.target.name))
+      }
+    }
+
+
     const newEvidence = {
       ...checkboxes,
-      [e.target.name]: !checkboxes[e.target.name]
+      [e.target.name]: newBoxState
     };
     setCheckboxes(newEvidence);
 
@@ -53,14 +77,18 @@ const EvidenceForm = ({ setEvidenceState, evidenceState }) => {
     <div >
       <div className="evidenceFormContainer">
         {evidence.map((evi) => {
-          const isDisabled = numChecked >= 3 && !checkboxes[evi];
+          const isDisabled = numChecked >= 3 && !checkboxes[evi]
           const buttons = calcButtons({ currentEvidence: evidenceState });
           const shouldDisable = buttons.includes(evi);
           return (
             <div>
               <Button
-                className={checkboxes[evi] ? "selectedButton" : "button"}
-                // background={checkboxes[evi] ? "#28d326" : "#dee5e8"}
+                className={checkboxes[evi] 
+                  ? "selectedButton" 
+                  : 
+                    checkboxes[evi] === null 
+                      ? "manuallyDisabled" 
+                      : "button"}
                 isDisabled={isDisabled || shouldDisable}
                 onClick={handleChange}
                 text={evi}
@@ -76,6 +104,7 @@ const EvidenceForm = ({ setEvidenceState, evidenceState }) => {
             setNumChecked(0)
             setCheckboxes(defaultCheckboxes)
             setEvidenceState(defaultEvidenceState)
+            setNotEvidence([])
           }}
         >reset</p>
       </div>

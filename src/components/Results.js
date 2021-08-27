@@ -2,9 +2,9 @@ import React from "react";
 import { determineGhosts } from "../util";
 import { evidenceMap, ghostMap } from "../constants";
 
-const Results = ({ evidence }) => {
+const Results = ({ evidence, notEvidence, setNotEvidence }) => {
   const noNones = Object.values(evidence)?.filter((evi) => evi !== "none");
-  const ghostResults = determineGhosts(evidence)
+  const ghostResults = determineGhosts(evidence, notEvidence)
   const isLastGhost = ghostResults?.length === 1
   
 
@@ -14,7 +14,6 @@ const Results = ({ evidence }) => {
     <div className={`ghostList ${isLastGhost ? "finalResults" : "normalResults"}`}>
       {ghostResults?.map((ghost, i) => {
         const remainingEvidence = noNones.length === 2 ? getRemainingEvidence({ noNones, ghost })[0] : ""
-        console.log({remainingEvidence: remainingEvidence.substring(0)})
         return (
           <div
             className={`ghostName ${isLastGhost ? "ghostNameLast" : "ghostNameNormal"}`}
