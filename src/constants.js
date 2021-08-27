@@ -88,30 +88,30 @@ export const ghostMap = {
 };
 
 export const ghostInfo = {
-  [shade]: "shy, will not hunt with multiple people nearby",
+  [shade]: "Shy, will not hunt with multiple people nearby",
   [phantom]:
-    "looking at phantom will drop sanity, taking a photo of it makes it temporarily disappear",
+    "Looking at phantom will drop sanity, taking a photo of it makes it temporarily disappear",
   [jinn]:
-    "will travel faster if victim is far away, turning off power stops this ability",
+    "Will travel faster if victim is far away, turning off power stops this ability",
   [yurei]:
-    "has a strong effect on sanity, smudging its room will cause it to stay put for a long time",
+    "Has a strong effect on sanity, smudging its room will cause it to stay put for a long time",
   [mare]:
-    "increased chance to attack in the dark, decreased chance to attack in the light",
+    "Increased chance to attack in the dark, decreased chance to attack in the light",
   [demon]:
-    "will attack more often, successful questions via the Ouija Board do not lower sanity",
-  [banshee]: "will attack anything, targets one at a time, fears the Crucifix",
-  [revenant]: "very fast when hunting, hiding from it will slow it down",
-  [oni]: "more active with people nearby, moves objects at great speed",
+    "Will attack more often, successful questions via the Ouija Board do not lower sanity",
+  [banshee]: "Will attack anything, targets one at a time, fears the Crucifix",
+  [revenant]: "Very fast when hunting, hiding from it will slow it down",
+  [oni]: "More active with people nearby, moves objects at great speed",
   [poltergeist]:
-    "throws huge amounts of objects at once, can appear as high EMF on graph",
-  [spirit]: "using smudge sticks will stop its attack for a long period of time",
+    "Throws huge amounts of objects at once, can appear as high EMF on graph",
+  [spirit]: "Using smudge sticks will stop its attack for a long period of time",
   [wraith]:
-    "almost never touch the ground (no footsteps), has a toxic reaction to salt",
-  [hantu]: "faster in colder areas, slower in warmer areas",
+    "Almost never touch the ground (no footprints), has a toxic reaction to salt",
+  [hantu]: "Faster in colder areas, slower in warmer areas",
   [yokai]:
-    "talking near it will cause it to attack more often, can only hear close voices when hunting",
-  [goryo]: "usually shows itself on camera if no one is nearby, rarely seen far from place of death",
-  [myling]: "quieter when hunting, more frequently makes paranormal sounds"
+    "Talking near it will cause it to attack more often, can only hear close voices when hunting",
+  [goryo]: "Usually shows itself on camera if no one is nearby, rarely seen far from place of death",
+  [myling]: "Quieter when hunting, more frequently makes paranormal sounds"
 };
 
 export const maps = [

@@ -1,5 +1,17 @@
 import { evidenceMap, ghostMap, allEvidence } from "./constants";
 
+export const transformName = (name, noEmoji=false) => {
+  console.log({noEmoji})
+  if(name.includes('spirit')){
+    return noEmoji ? "spirit box" : "📻 spirit box"
+  }
+
+  if(name.includes('dots')){
+    return noEmoji ? "D.O.T.S." : "🟢 D.O.T.S."
+  }
+
+  return name
+}
 
 const removeNotEvidence = (notEviList, possibleGhosts) => {
   

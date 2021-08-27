@@ -25,7 +25,7 @@ const GhostReference = () => {
         })}
       </select>
 
-      <p style={{ marginTop: "10px", textAlign: "left", minHeight: "55px" }}>
+      <p style={{ marginTop: "10px", textAlign: "left", minHeight: "55px", marginBottom: '0'}}>
         {ghostInfo[ghost]}
       </p>
     </div>

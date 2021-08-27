@@ -1,5 +1,5 @@
 import React from "react";
-import { determineGhosts } from "../util";
+import { determineGhosts, transformName } from "../util";
 import { evidenceMap, ghostMap } from "../constants";
 
 const Results = ({ evidence, notEvidence, setNotEvidence }) => {
@@ -14,14 +14,16 @@ const Results = ({ evidence, notEvidence, setNotEvidence }) => {
     <div className={`ghostList ${isLastGhost ? "finalResults" : "normalResults"}`}>
       {ghostResults?.map((ghost, i) => {
         const remainingEvidence = noNones.length === 2 ? getRemainingEvidence({ noNones, ghost })[0] : ""
+
+        const transformedName = transformName(remainingEvidence, true)
         return (
           <div
             className={`ghostName ${isLastGhost ? "ghostNameLast" : "ghostNameNormal"}`}
             key={i}
           >
-            {`${ghost}${
+            {`${ghost[0].toUpperCase() + ghost.substring(1, ghost.length)}${
               noNones.length === 2
-                ? " - " + remainingEvidence
+                ? " - " + (transformedName === "emf" ? transformedName.toUpperCase() : transformedName)
                 : ""
             }`}
           </div>

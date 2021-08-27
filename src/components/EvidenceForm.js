@@ -16,7 +16,7 @@ const EvidenceForm = ({ setEvidenceState, evidenceState, notEvidence, setNotEvid
   }
   const evidence = Object.keys(evidenceMap).filter((evi) => evi !== "none");
   const [checkboxes, setCheckboxes] = useState(defaultCheckboxes);
-
+  const [showInfo, setShowInfo] = useState(false)
   const [numChecked, setNumChecked] = useState(0);
 
 
@@ -75,6 +75,24 @@ const EvidenceForm = ({ setEvidenceState, evidenceState, notEvidence, setNotEvid
 
   return (
     <div >
+      <div 
+        className="centered" 
+        style={{
+          cursor: 'pointer', 
+          color: "black", 
+          float:'right', 
+          borderRadius:'100%', 
+          padding:'5px', 
+          background:'#7A848F', 
+          width:'10px', 
+          height:'10px',
+          marginBottom:'10px'
+        }}
+        onClick={()=>setShowInfo(!showInfo)}
+      >i</div>
+      {showInfo && <div>
+        <p style={{marginTop:'30px'}}>click button once to mark as evidence, again to eliminate as evidence, and again to de-select</p>
+      </div>}
       <div className="evidenceFormContainer">
         {evidence.map((evi) => {
           const isDisabled = numChecked >= 3 && !checkboxes[evi]

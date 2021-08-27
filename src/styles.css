@@ -168,7 +168,9 @@ li{
   font-size: 0.7rem;
   width: 135px;
   cursor: pointer;
-  background-color: #961210;
+  color: #c3c3c3;
+  background: black;
+  /* background-color: #961210; */
   transition: background-color 250ms linear;
 }
 
@@ -199,8 +201,6 @@ select {
 
 .ghostName {
   margin: 5px;
-  /* min-width: 100px; */
-  text-transform: capitalize;
   display: flex;
   font-weight:700;
 }

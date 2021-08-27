@@ -1,5 +1,7 @@
 import React from "react";
+import { getNameOfDeclaration } from "typescript";
 import { evidenceNames } from "../constants";
+import {transformName} from '../util'
 
 const Button = ({
   className,
@@ -8,6 +10,7 @@ const Button = ({
   text = "",
 }) => {
 
+  let buttonLabel = evidenceNames[text]
   
   return (
     <button
@@ -18,7 +21,7 @@ const Button = ({
       name={text}
 
     >
-      {evidenceNames[text]}
+      {transformName(buttonLabel)}
     </button>
   );
 };
