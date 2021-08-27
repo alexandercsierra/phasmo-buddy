@@ -101,8 +101,6 @@ li{
   display: flex;
   justify-content: center;
   align-items: center;
-
-  /* border: 1px solid green; */
   margin-left: 10px;
 }
 

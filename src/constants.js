@@ -119,13 +119,13 @@ export const maps = [
     name: "Tanglewood Street House",
     url:
       "https://www.yekbot.com/wp-content/uploads/2020/10/2251267947_preview_TanglewoodStreetHouse_Map.jpg.webp",
-    credit: "yekbot.com"
+    credit: "Tom Maverick - yekbot.com"
   },
   {
     name: "Willow Street House",
     url:
       "https://steamuserimages-a.akamaihd.net/ugc/1713038213908602006/D4C6446762EA673A475098184F914CCEDF34D479/",
-    credit: "steam"
+    credit: "Tom Maverick - steam"
   },
   {
     name: "Edgefield Street House",
@@ -136,7 +136,7 @@ export const maps = [
     name: "Ridgeview Road House",
     url:
       "https://www.naguide.com/wp-content/uploads/2020/10/Phasmophobia-Ridgeview-Road-House-Map.jpg",
-    credit: "naguide.com"
+    credit: "Tom Maverick - naguide.com"
   },
   {
     name: "Grafton Farmhouse",
@@ -153,7 +153,7 @@ export const maps = [
     name: "Brownstone High School",
     url:
       "https://www.naguide.com/wp-content/uploads/2020/10/Phasmophobia-Brownstone-High-School-Map.jpg",
-    credit: "naguide.com"
+    credit: "Tom Maverick - naguide.com"
   },
   {
     name: "Prison",

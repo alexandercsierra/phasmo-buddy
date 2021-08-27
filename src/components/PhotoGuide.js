@@ -5,11 +5,7 @@ export default function PhotoGuide() {
     const photoList = [
         {
             text: "Ghost Photo",
-            emoji: "🖼"
-        },
-        {
-            text: "Fingerprints",
-            emoji: "🖐"
+            emoji: "👻"
         },
         {
             text: "Bone",
@@ -17,7 +13,11 @@ export default function PhotoGuide() {
         },
         {
             text: "Ouija Board",
-            emoji: "👁‍🗨"
+            emoji: "😱"
+        },
+        {
+            text: "Fingerprints",
+            emoji: "🖐"
         },
         {
             text: "Interactions",
@@ -38,12 +38,20 @@ export default function PhotoGuide() {
                         <p style={{marginLeft:'5px'}}>{photo.text}</p> 
                     </div>
                 })}
-                {/* <div className="centerd ">1. <p style={{width:'10px'}}>🖼</p> Ghost photo</div>
-                <div className="centerd ">2. <p style={{width:'10px'}}>🖐</p> Fingerprints</div>
-                <div className="centerd ">3. <p style={{width:'10px'}}>🦴</p> Bone</div>
-                <div className="centerd ">4. <p style={{width:'10px'}}>👁‍🗨</p> Ouija Board</div>
-                <div className="centerd ">5. <p style={{width:'10px'}}>❗</p> Interactions</div> */}
+                
             </div>
+            <a
+              href="https://youtu.be/Ruzsm01eqpQ?t=1430"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                color: "inherit",
+                fontSize:'.8rem',
+                marginTop:'10px'
+              }}
+            >
+                source: Insym - YouTube
+            </a>
         </div>
     )
 }

@@ -31,7 +31,7 @@ const Maps = () => {
             src={mapInfo.url}
             style={{
               maxWidth: "100%",
-              maxHeight: "75vh",
+              maxHeight: "80vh",
               cursor: "pointer"
             }}
           />
@@ -39,9 +39,10 @@ const Maps = () => {
             href={mapInfo.url}
             style={{
               color: "inherit",
-              textDecoration: "none",
+              // textDecoration: "none",
               alignSelf: "flex-end",
-              margin: "10px 0 0 0"
+              margin: "10px 0 0 0",
+              fontSize:'.8rem'
             }}
           >
             credit: {mapInfo.credit}
