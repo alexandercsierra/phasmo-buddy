@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Results from "./Results";
 import EvidenceForm from "./EvidenceForm";
 import TitleOptions from "./TitleOptions";
-import PhotoGuide from "./PhotoGuide";
 import { defaultEvidenceState } from "../constants";
+import NameObjectives from "./NameObjectives";
 
 const Evidence = ({ setShowEvidence, showEvidence, setShowMap, showMap }) => {
   const [evidence, setEvidence] = useState(defaultEvidenceState);
@@ -21,6 +21,7 @@ const Evidence = ({ setShowEvidence, showEvidence, setShowMap, showMap }) => {
           />
           <EvidenceForm evidenceState={evidence} setEvidenceState={setEvidence} notEvidence={notEvidence} setNotEvidence={setNotEvidence} />
           <Results evidence={evidence} notEvidence={notEvidence} setNotEvidence={setNotEvidence}/>
+          <NameObjectives/>
           <div style={{ margin: "20px auto" }}>
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSenm0lx8nl9-Is6lJzMvpfLNISIUZrSzmn4ufLaoJyh1sSBEQ/viewform?usp=sf_link"

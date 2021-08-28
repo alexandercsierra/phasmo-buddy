@@ -52,6 +52,10 @@ li{
   align-items: center;
 }
 
+.wrap {
+  flex-wrap: wrap;
+}
+
 .column {
   flex-direction: column;
 }
@@ -221,6 +225,41 @@ select {
   display: none;
 }
 
+.ghostNameInput {
+  padding: 8px;
+  border-radius: 5px;
+  margin: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  box-sizing: border-box;
+  background-color: "#dee5e8";
+  border: none;
+}
+
+.submitButton {
+  box-sizing: border-box;
+  padding: 9.7px;
+  width: 70px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  margin: 0;
+  background: #7A848F;
+  color: white;
+}
+
+.submitButton:hover {
+  background: #626a72;
+}
+
+.editButton {
+  margin-left: 10px;
+  color: #92782a;
+  cursor: pointer;
+}
+
+.editButton:hover {
+  color: #d8b44a;
+}
 
 
 @media (max-width: 900px) {
