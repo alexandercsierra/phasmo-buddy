@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { maps } from "../constants";
-import GhostReference from "./GhostReference";
 
 const Maps = () => {
   const [mapInfo, setMapInfo] = useState(maps[0]);

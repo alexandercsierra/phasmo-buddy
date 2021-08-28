@@ -207,6 +207,11 @@ select {
   font-weight:700;
 }
 
+.ghostName:hover {
+  color: #d6d6d6;
+  cursor: pointer;
+}
+
 .ghostNameNormal{
   font-size: 1rem;
   justify-content:'flex-start';

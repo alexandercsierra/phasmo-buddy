@@ -1,12 +1,17 @@
 import React from "react";
-import { determineGhosts, transformName } from "../util";
+import { determineGhosts, transformName, capitalize} from "../util";
 import { evidenceMap, ghostMap } from "../constants";
 
-const Results = ({ evidence, notEvidence, setNotEvidence }) => {
+const Results = ({ evidence, notEvidence, setNotEvidence, setGhostInfo }) => {
   const noNones = Object.values(evidence)?.filter((evi) => evi !== "none");
   const ghostResults = determineGhosts(evidence, notEvidence)
   const isLastGhost = ghostResults?.length === 1
   
+  const handleGhostClick = (ghost) => {
+    console.log({ghost})
+    setGhostInfo(ghost)
+
+  }
 
 
 
@@ -20,8 +25,9 @@ const Results = ({ evidence, notEvidence, setNotEvidence }) => {
           <div
             className={`ghostName ${isLastGhost ? "ghostNameLast" : "ghostNameNormal"}`}
             key={i}
+            onClick={()=>handleGhostClick(ghost)}
           >
-            {`${ghost[0].toUpperCase() + ghost.substring(1, ghost.length)}${
+            {`${capitalize(ghost)}${
               noNones.length === 2
                 ? " - " + (transformedName === "emf" ? transformedName.toUpperCase() : transformedName)
                 : ""

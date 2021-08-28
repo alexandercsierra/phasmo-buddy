@@ -7,6 +7,8 @@ import PhotoGuide from "./components/PhotoGuide";
 export default function App() {
   const [showEvidence, setShowEvidence] = useState(true);
   const [showMap, setShowMap] = useState(true);
+  const [ghostInfo, setGhostInfo] = useState("")
+
   return (
     <div className="App">
       <div className="container">
@@ -18,6 +20,8 @@ export default function App() {
                 showEvidence={showEvidence}
                 setShowMap={setShowMap}
                 showMap={showMap}
+                ghostInfo={ghostInfo}
+                setGhostInfo={setGhostInfo}
               />
             </div>
             <div className="centered evidenceWrapper hideOnMobile" style={{marginTop:'20px'}}>

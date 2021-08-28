@@ -4,8 +4,9 @@ import EvidenceForm from "./EvidenceForm";
 import TitleOptions from "./TitleOptions";
 import { defaultEvidenceState } from "../constants";
 import NameObjectives from "./NameObjectives";
+import GhostReference from "./GhostReference";
 
-const Evidence = ({ setShowEvidence, showEvidence, setShowMap, showMap }) => {
+const Evidence = ({ setShowEvidence, showEvidence, setShowMap, showMap, ghostInfo, setGhostInfo }) => {
   const [evidence, setEvidence] = useState(defaultEvidenceState);
   const [notEvidence, setNotEvidence] = useState([])
 
@@ -20,7 +21,8 @@ const Evidence = ({ setShowEvidence, showEvidence, setShowMap, showMap }) => {
             showMap={showMap}
           />
           <EvidenceForm evidenceState={evidence} setEvidenceState={setEvidence} notEvidence={notEvidence} setNotEvidence={setNotEvidence} />
-          <Results evidence={evidence} notEvidence={notEvidence} setNotEvidence={setNotEvidence}/>
+          <Results evidence={evidence} notEvidence={notEvidence} setNotEvidence={setNotEvidence} setGhostInfo={setGhostInfo}/>
+          <GhostReference initialGhost={ghostInfo}/>
           <NameObjectives/>
           <div style={{ margin: "20px auto" }}>
             <a
