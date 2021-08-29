@@ -24,7 +24,7 @@ export default function App() {
               </div>
             </div>
             <div style={{display:'flex', marginTop:'20px'}} className="w100">
-              <div className="evidenceWrapper centered" style={{ width: '350px', padding: '25px', marginRight: "10px"}}>
+              <div className="evidenceWrapper centered" style={{ width: '330px', padding: '25px', marginRight: "10px"}}>
                 <NameObjectives/>
               </div>
               <div className="centered evidenceWrapper hideOnMobile" style={{width:'350px'}}>
