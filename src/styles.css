@@ -344,7 +344,7 @@ select {
     width: 100%;
   }
   .ghostList {
-    width: 90%;
+    /* width: 90%; */
     margin: 10px auto;
   }
   .mapContainer {

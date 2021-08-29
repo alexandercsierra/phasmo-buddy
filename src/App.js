@@ -37,7 +37,7 @@ export default function App() {
 
           <div className="centered column showOnMobile">
             <div  className="w100 centered column">
-              <div className="centered evidenceWrapper" style={{marginBottom: '10px'}}>
+              <div className="centered" style={{marginBottom: '10px'}}>
                 <Evidence
                   ghostInfo={ghostInfo}
                   setGhostInfo={setGhostInfo}
@@ -47,10 +47,10 @@ export default function App() {
                 <Maps />
               </div>
             </div>
-              <div className="evidenceWrapper centered" style={{ width: '350px', padding: '25px', margin: '10px auto'}}>
+              {/* <div className="evidenceWrapper centered" style={{ width: '350px', padding: '25px', margin: '10px auto'}}>
                 <NameObjectives/>
-              </div>
-              <div className="centered evidenceWrapper" style={{width:'350px', margin: '0 auto'}}>
+              </div> */}
+              <div className="centered evidenceWrapper" style={{width:'100%', margin: '10px auto'}}>
                 <PhotoGuide/>
               </div>
           </div>
