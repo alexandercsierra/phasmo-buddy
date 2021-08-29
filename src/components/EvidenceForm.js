@@ -3,7 +3,6 @@ import { evidenceMap, evidenceVars } from "../constants";
 import { calcButtons } from "../util";
 import Button from "./Button";
 import { defaultEvidenceState } from "../constants";
-import InfoButton from "./InfoButton";
 
 const EvidenceForm = ({ setEvidenceState, evidenceState, notEvidence, setNotEvidence}) => {
   const defaultCheckboxes = {
@@ -73,19 +72,34 @@ const EvidenceForm = ({ setEvidenceState, evidenceState, notEvidence, setNotEvid
     });
   };
 
-  const infoClick = ()=>setShowInfo(!showInfo)
-
 
   return (
     <div >
-      <InfoButton onClick={infoClick} showInfo={showInfo} isEvidenceButton/>
+      <div 
+        className="centered" 
+        style={{
+          cursor: 'pointer', 
+          color: "black", 
+          float:'right', 
+          borderRadius:'100%', 
+          padding:'5px', 
+          background:'#7A848F', 
+          width:'10px', 
+          height:'10px',
+          marginBottom:'10px'
+        }}
+        onClick={()=>setShowInfo(!showInfo)}
+      >i</div>
+      {showInfo && <div>
+        <p style={{marginTop:'30px'}}>click button once to mark as evidence, again to eliminate as evidence, and again to de-select</p>
+      </div>}
       <div className="evidenceFormContainer">
-        {evidence.map((evi, i) => {
+        {evidence.map((evi) => {
           const isDisabled = numChecked >= 3 && !checkboxes[evi]
           const buttons = calcButtons({ currentEvidence: evidenceState });
           const shouldDisable = buttons.includes(evi);
           return (
-            <div key={`${evi}-${i}`}>
+            <div>
               <Button
                 className={checkboxes[evi] 
                   ? "selectedButton" 

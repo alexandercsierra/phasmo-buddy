@@ -1,37 +1,31 @@
-import React, { useState, useEffect} from "react";
+import React, { useState } from "react";
 import { ghostMap, ghostInfo } from "../constants";
-import { capitalize } from '../util'
 
-const GhostReference = ({initialGhost=""}) => {
-  const [ghost, setGhost] = useState(initialGhost);
+const GhostReference = () => {
+  const [ghost, setGhost] = useState("");
 
   const handleChange = (e) => {
     setGhost(e.target.value);
   };
 
-  useEffect(()=>{
-    setGhost(initialGhost)
-  },[initialGhost])
-
   return (
     <div
       style={{
-        marginTop: "15px",
+        marginTop: "5px",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        flexDirection: "column",
-        minHeight:'200px'
+        flexDirection: "column"
       }}
     >
-      <select onChange={handleChange} value={ghost}>
+      <select onChange={handleChange}>
         <option>Ghost Info</option>
-        {Object.keys(ghostMap).map((ghost, i) => {
-          return <option key={`${ghost}-${i}`} value={ghost}>{capitalize(ghost)}</option>;
+        {Object.keys(ghostMap).map((ghost) => {
+          return <option value={ghost}>{ghost}</option>;
         })}
       </select>
 
-      <p style={{ marginTop: "10px", textAlign: "left", minHeight: "55px", marginBottom: '0', color:'white', fontWeight:'700', padding:'30px'}}>
+      <p style={{ marginTop: "10px", textAlign: "left", minHeight: "55px", marginBottom: '0'}}>
         {ghostInfo[ghost]}
       </p>
     </div>
