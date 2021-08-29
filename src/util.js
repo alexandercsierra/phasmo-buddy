@@ -1,7 +1,10 @@
 import { evidenceMap, ghostMap, allEvidence } from "./constants";
 
+export const capitalize = (str)=> {
+  return str[0].toUpperCase() + str.substring(1, str.length)
+}
+
 export const transformName = (name, noEmoji=false) => {
-  console.log({noEmoji})
   if(name.includes('spirit')){
     return noEmoji ? "spirit box" : "📻 spirit box"
   }

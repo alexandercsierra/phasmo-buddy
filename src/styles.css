@@ -1,3 +1,9 @@
+body {
+  min-width: fit-content;
+  /* max-width: 100%; */
+  margin: 0;
+}
+
 ol{
   margin:0;
   padding:0;
@@ -23,6 +29,14 @@ li{
   box-sizing: border-box;
   /* border: 1px solid red; */
 }
+
+.MuiDialog-paperWidthSm {
+  max-width: 100% !important;
+  background: #14171c !important;
+  padding: 10px !important;
+  border: 2px solid white;
+}
+
 
 .redBorder {
   border: 1px solid red;
@@ -52,20 +66,49 @@ li{
   align-items: center;
 }
 
+.wrap {
+  flex-wrap: wrap;
+}
+
 .column {
   flex-direction: column;
 }
 
 .evidenceWrapper {
   background: #14171c;
+  box-sizing: border-box;
   /* min-height: 100vh; */
-  padding: 25px;
+  padding: 8px;
   border-radius: 10px;
+  /* margin: 5px; */
+}
+
+.footer {
+  background: #14171c;
+  padding: 25px;
+  margin: 0;
+  margin-top: 40px;
 }
 
 .evidenceContainer {
   width: 300px;
   /* border: 1px solid green; */
+}
+
+.objectiveContainer{
+  /* display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start; */
+  /* margin-top: 30px; */
+  background: #333333;
+  color: white;
+  /* flex-wrap: wrap; */
+  padding: 10px;
+  border-radius: 10px;
+  height: 150px;
+  width: 250px;
+  margin-bottom: 10px;
 }
 
 .evidenceFormContainer {
@@ -80,6 +123,7 @@ li{
 .photoGuideContainer {
   flex-direction: column;
   max-width: 100%;
+  height: 390px;
 }
 
 .ghostList {
@@ -93,8 +137,8 @@ li{
   flex-wrap: wrap;
   padding: 10px;
   border-radius: 10px;
-  height: 180px;
-  width: 280px;
+  height: 150px;
+  width: 320px;
 }
 
 .mapContainer {
@@ -119,7 +163,7 @@ li{
 .mapDiv {
   background: #14171c;
   border-radius: 10px;
-  padding: 25px;
+  padding: 15px;
 }
 
 .button {
@@ -132,7 +176,7 @@ li{
   font-size: 0.7rem;
   width: 135px;
   cursor: pointer;
-  background-color: "#dee5e8";
+  background: white;
   transition: background-color 250ms linear;
 }
 
@@ -203,6 +247,11 @@ select {
   font-weight:700;
 }
 
+.ghostName:hover {
+  color: #d6d6d6;
+  cursor: pointer;
+}
+
 .ghostNameNormal{
   font-size: 1rem;
   justify-content:'flex-start';
@@ -213,6 +262,25 @@ select {
   justify-content:'center';
 }
 
+.objective {
+  text-transform:initial;
+  width: 250px;
+  font-size: .9rem;
+}
+
+.selectedObjective {
+  text-transform: initial;
+  width: 250px;
+  font-size: .9rem;
+}
+
+
+.objectiveDialog {
+  width: 550px;
+}
+
+
+
 .hideOnMobile {
   display: flex;
 }
@@ -221,6 +289,43 @@ select {
   display: none;
 }
 
+.ghostNameInput {
+  padding: 8px;
+  border-radius: 5px;
+  margin: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  box-sizing: border-box;
+  background-color: "#dee5e8";
+  border: none;
+  width: 150px;
+}
+
+.submitButton {
+  box-sizing: border-box;
+  padding: 9.1px;
+  width: 50px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  margin: 0;
+  background: #7A848F;
+  color: white;
+  font-size: .75rem;
+}
+
+.submitButton:hover {
+  background: #626a72;
+}
+
+.editButton {
+  margin-left: 10px;
+  color: #92782a;
+  cursor: pointer;
+}
+
+.editButton:hover {
+  color: #d8b44a;
+}
 
 
 @media (max-width: 900px) {
@@ -233,21 +338,22 @@ select {
   }
 
   .container {
-    flex-direction: column;
+    /* flex-direction: column; */
   }
   .evidenceContainer {
-    width: 100%;
+    /* width: 100%; */
   }
   .ghostList {
-    width: 90%;
-    margin: 10px auto;
+    /* width: 90%; */
+    /* margin: 10px auto; */
   }
   .mapContainer {
     margin-left: 0px;
-    margin-top: 40px;
-    width: "100%";
+    /* margin-top: 40px; */
+    padding: 0;
+    /* width: "100%"; */
   }
-  .evidenceWrapper {
+  /* .evidenceWrapper {
     min-height: "inherit";
-  }
+  } */
 }

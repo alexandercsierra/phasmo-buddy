@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { maps } from "../constants";
-import GhostReference from "./GhostReference";
 
 const Maps = () => {
   const [mapInfo, setMapInfo] = useState(maps[0]);
@@ -31,7 +30,7 @@ const Maps = () => {
             src={mapInfo.url}
             style={{
               maxWidth: "100%",
-              maxHeight: "80vh",
+              maxHeight: "87vh",
               cursor: "pointer"
             }}
           />
