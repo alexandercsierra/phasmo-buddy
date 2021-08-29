@@ -35,7 +35,7 @@ export default function App() {
 
 
 
-          <div className="centered column showOnMobile">
+          <div className="centered column showOnMobile w100">
             <div  className="w100 centered column">
               <div className="centered" style={{marginBottom: '10px'}}>
                 <Evidence
