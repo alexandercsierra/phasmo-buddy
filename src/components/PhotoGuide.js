@@ -27,12 +27,12 @@ export default function PhotoGuide() {
 
 
     return (
-        <div className="photoGuideContainer flexStartColumn" style={{paddingBottom:'25px'}}>
+        <div className="photoGuideContainer flexStartColumn evidenceWrapper">
             <h3>📸 Photo Guide</h3>
             <p >Photo types ranked by most points</p>
             <div className="w100" style={{textAlign:'left', marginLeft: '10px'}}>
                 {photoList.map((photo, i)=>{
-                    return <div key={i} className="centered flexStart">
+                    return <div className="centered flexStart">
                         <p style={{marginRight:'5px'}}>{i+1}.{" "}</p>
                         <p className="centered" style={{width:'20px', marginTop:'12px'}}>{photo.emoji}</p> 
                         <p style={{marginLeft:'5px'}}>{photo.text}</p> 
