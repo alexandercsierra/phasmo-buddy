@@ -11,7 +11,7 @@ export const objectives = [
   "EMF reading",
   "motion sensor",
   "smudge ghost area",
-  "use crucifix to prevent hunt",
+  "prevent hunt with crucifix",
   "ghost walk through salt",
   "ghost blow out candle",
   "escape hunt with no deaths",

@@ -32,7 +32,7 @@ const Results = ({ evidence, notEvidence, setNotEvidence, setGhostInfo, ghostInf
   return (
     <div>
       <InfoButton onClick={handleOpen}/>
-      <GenericDialog open={open} handleClose={handleClose}>
+      <GenericDialog open={open} handleClose={handleClose} title={"Ghost Info"} titleHeight={"30px"}>
         <GhostReference initialGhost={ghostInfo}/>
       </GenericDialog>
       <div className={`ghostList ${isLastGhost ? "finalResults" : "normalResults"}`}>

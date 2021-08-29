@@ -96,7 +96,7 @@ const Objectives = () => {
                 <p 
                     style={{textDecoration:'underline', cursor:'pointer'}}
                     onClick={handleOpen} 
-                    >{selectedObjectives?.length ? "reset objectives" : "set objectives"}</p>
+                    >{selectedObjectives?.length <= 1 ? "set objectives" : "reset objectives"}</p>
             </div>
         </div>
     )

@@ -20,7 +20,8 @@ const GhostReference = ({initialGhost=""}) => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        flexDirection: "column"
+        flexDirection: "column",
+        minHeight:'200px'
       }}
     >
       <select onChange={handleChange} value={ghost}>
@@ -30,7 +31,7 @@ const GhostReference = ({initialGhost=""}) => {
         })}
       </select>
 
-      <p style={{ marginTop: "10px", textAlign: "left", minHeight: "55px", marginBottom: '0'}}>
+      <p style={{ marginTop: "10px", textAlign: "left", minHeight: "55px", marginBottom: '0', color:'white', fontWeight:'700', padding:'30px'}}>
         {ghostInfo[ghost]}
       </p>
     </div>
