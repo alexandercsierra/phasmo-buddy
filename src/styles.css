@@ -24,6 +24,14 @@ li{
   /* border: 1px solid red; */
 }
 
+.MuiDialog-paperWidthSm {
+  max-width: 100% !important;
+  background: #14171c !important;
+  padding: 10px !important;
+  border: 2px solid white;
+}
+
+
 .redBorder {
   border: 1px solid red;
 }
@@ -136,7 +144,7 @@ li{
   font-size: 0.7rem;
   width: 135px;
   cursor: pointer;
-  background-color: "#dee5e8";
+  background: white;
   transition: background-color 250ms linear;
 }
 
@@ -221,6 +229,23 @@ select {
   font-size: 2rem;
   justify-content:'center';
 }
+
+.objective {
+  text-transform:initial;
+  width: 200px;
+}
+
+.selectedObjective {
+  text-transform: initial;
+  width: 200px;
+}
+
+
+.objectiveDialog {
+  width: 500px;
+}
+
+
 
 .hideOnMobile {
   display: flex;

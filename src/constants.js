@@ -4,6 +4,19 @@ export const defaultEvidenceState = {
   3: "none"
 }
 
+export const objectives = [
+  "witness ghost event", 
+  "ghost photo", 
+  "EMF reading",
+  "motion sensor",
+  "smudge ghost area",
+  "use crucifix to prevent hunt",
+  "ghost walk through salt",
+  "ghost blow out candle",
+  "escape hunt with no deaths",
+  "smudge ghost while hunting",
+  "get average sanity below 25%"
+]
 
 
 
