@@ -3,44 +3,79 @@ import Maps from "./components/Maps";
 import Evidence from "./components/Evidence";
 import { useState } from "react";
 import PhotoGuide from "./components/PhotoGuide";
+import NameObjectives from "./components/NameObjectives";
 
 export default function App() {
-  const [showEvidence, setShowEvidence] = useState(true);
-  const [showMap, setShowMap] = useState(true);
   const [ghostInfo, setGhostInfo] = useState("")
 
   return (
-    <div className="App">
-      <div className="container">
-        {showEvidence && (
-          <div className="centered column">
-            <div className="evidenceWrapper">
-              <Evidence
-                setShowEvidence={setShowEvidence}
-                showEvidence={showEvidence}
-                setShowMap={setShowMap}
-                showMap={showMap}
-                ghostInfo={ghostInfo}
-                setGhostInfo={setGhostInfo}
-              />
+    <div className="App w100">
+      <div className="container w100">
+          <div className="centered column hideOnMobile">
+            <div style={{display:'flex', marginTop:'20px'}} className="w100">
+              <div className="centered evidenceWrapper">
+                <Evidence
+                  ghostInfo={ghostInfo}
+                  setGhostInfo={setGhostInfo}
+                />
+              </div>
+              <div className="evidenceWrapper centered" style={{marginLeft: "10px", padding: 0}}>
+                <Maps />
+              </div>
             </div>
-            <div className="centered evidenceWrapper hideOnMobile" style={{marginTop:'20px'}}>
-              <PhotoGuide/>
+            <div style={{display:'flex', marginTop:'20px'}} className="w100">
+              <div className="evidenceWrapper centered" style={{ width: '350px', padding: '25px', marginRight: "10px"}}>
+                <NameObjectives/>
+              </div>
+              <div className="centered evidenceWrapper hideOnMobile" style={{width:'350px'}}>
+                <PhotoGuide/>
+              </div>
             </div>
           </div>
-        )}
-        {showMap && (
-          <div className="centered column">
-            <div className="w100 centered column">
-              <Maps />
-            </div>
-            <div className="centered evidenceWrapper showOnMobile" style={{marginTop:'20px'}}>
-              <PhotoGuide/>
-            </div>
 
+
+
+          <div className="centered column showOnMobile">
+            <div  className="w100 centered column">
+              <div className="centered evidenceWrapper" style={{marginBottom: '10px'}}>
+                <Evidence
+                  ghostInfo={ghostInfo}
+                  setGhostInfo={setGhostInfo}
+                />
+              </div>
+              <div className="evidenceWrapper centered" style={{padding: 0}}>
+                <Maps />
+              </div>
+            </div>
+              <div className="evidenceWrapper centered" style={{ width: '350px', padding: '25px', margin: '10px auto'}}>
+                <NameObjectives/>
+              </div>
+              <div className="centered evidenceWrapper" style={{width:'350px', margin: '0 auto'}}>
+                <PhotoGuide/>
+              </div>
           </div>
-        )}
+
+
       </div>
+      <Footer/> 
     </div>
   );
+}
+
+
+const Footer = () => {
+  return(
+    <div className="w100 footer" style={{boxSizing:'border-box'}}>
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSenm0lx8nl9-Is6lJzMvpfLNISIUZrSzmn4ufLaoJyh1sSBEQ/viewform?usp=sf_link"
+        target="_blank"
+        rel="noreferrer"
+        style={{
+          color: "inherit"
+        }}
+      >
+        Got feedback?
+      </a>
+    </div>
+  )
 }

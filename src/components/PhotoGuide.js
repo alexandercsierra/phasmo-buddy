@@ -27,7 +27,7 @@ export default function PhotoGuide() {
 
 
     return (
-        <div className="photoGuideContainer flexStartColumn evidenceWrapper">
+        <div className="photoGuideContainer flexStartColumn" style={{paddingBottom:'25px'}}>
             <h3>📸 Photo Guide</h3>
             <p >Photo types ranked by most points</p>
             <div className="w100" style={{textAlign:'left', marginLeft: '10px'}}>

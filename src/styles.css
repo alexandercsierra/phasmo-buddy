@@ -1,3 +1,9 @@
+body {
+  min-width: fit-content;
+  /* max-width: 100%; */
+  margin: 0;
+}
+
 ol{
   margin:0;
   padding:0;
@@ -71,13 +77,37 @@ li{
 .evidenceWrapper {
   background: #14171c;
   /* min-height: 100vh; */
-  padding: 25px;
+  padding: 20px;
   border-radius: 10px;
+  /* margin: 5px; */
+}
+
+.footer {
+  background: #14171c;
+  padding: 25px;
+  margin: 0;
+  margin-top: 40px;
 }
 
 .evidenceContainer {
   width: 300px;
   /* border: 1px solid green; */
+}
+
+.objectiveContainer{
+  /* display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start; */
+  /* margin-top: 30px; */
+  background: #606060;
+  color: white;
+  /* flex-wrap: wrap; */
+  padding: 10px;
+  border-radius: 10px;
+  height: 150px;
+  width: 250px;
+  margin-bottom: 10px;
 }
 
 .evidenceFormContainer {
@@ -92,6 +122,7 @@ li{
 .photoGuideContainer {
   flex-direction: column;
   max-width: 100%;
+  height: 390px;
 }
 
 .ghostList {
@@ -232,17 +263,19 @@ select {
 
 .objective {
   text-transform:initial;
-  width: 200px;
+  width: 250px;
+  font-size: .9rem;
 }
 
 .selectedObjective {
   text-transform: initial;
-  width: 200px;
+  width: 250px;
+  font-size: .9rem;
 }
 
 
 .objectiveDialog {
-  width: 500px;
+  width: 550px;
 }
 
 
@@ -264,6 +297,7 @@ select {
   box-sizing: border-box;
   background-color: "#dee5e8";
   border: none;
+  /* width: 100px; */
 }
 
 .submitButton {
@@ -314,6 +348,7 @@ select {
   .mapContainer {
     margin-left: 0px;
     margin-top: 40px;
+    padding: 0;
     width: "100%";
   }
   .evidenceWrapper {

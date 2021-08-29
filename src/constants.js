@@ -5,6 +5,7 @@ export const defaultEvidenceState = {
 }
 
 export const objectives = [
+  "identify ghost",
   "witness ghost event", 
   "ghost photo", 
   "EMF reading",
@@ -69,13 +70,13 @@ export const evidenceNames = {
 
 export const evidenceMap = {
   [none]: [ shade, phantom, jinn, yurei, mare, demon, banshee, revenant, oni, poltergeist, spirit, wraith, yokai, hantu, goryo, myling ],
-  [fingerprints]: [ myling, goryo, hantu, demon, jinn, banshee, poltergeist, phantom ],
-  [orbs]: [ yokai, hantu, yurei, revenant, mare, banshee ],
   [writing]: [ myling, demon, shade, revenant, mare, poltergeist, spirit ],
-  [freezing]: [ hantu, oni, yurei, demon, shade, revenant, jinn ],
-  [spirit_box]: [ yokai, mare, poltergeist, phantom, wraith, spirit ],
+  [dots]: [ goryo, yokai, oni, yurei, banshee, phantom, wraith ],
   [emf]: [myling, goryo, oni, shade, jinn, wraith, spirit],
-  [dots]: [ goryo, yokai, oni, yurei, banshee, phantom, wraith ]
+  [orbs]: [ yokai, hantu, yurei, revenant, mare, banshee ],
+  [spirit_box]: [ yokai, mare, poltergeist, phantom, wraith, spirit ],
+  [freezing]: [ hantu, oni, yurei, demon, shade, revenant, jinn ],
+  [fingerprints]: [ myling, goryo, hantu, demon, jinn, banshee, poltergeist, phantom ]
 };
 
 
