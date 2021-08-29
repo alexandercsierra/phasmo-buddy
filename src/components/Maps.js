@@ -30,7 +30,7 @@ const Maps = () => {
             src={mapInfo.url}
             style={{
               maxWidth: "100%",
-              maxHeight: "80vh",
+              maxHeight: "87vh",
               cursor: "pointer"
             }}
           />

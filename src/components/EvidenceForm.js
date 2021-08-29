@@ -73,10 +73,12 @@ const EvidenceForm = ({ setEvidenceState, evidenceState, notEvidence, setNotEvid
     });
   };
 
+  const infoClick = ()=>setShowInfo(!showInfo)
+
 
   return (
     <div >
-      <InfoButton showInfo={showInfo} setShowInfo={setShowInfo} />
+      <InfoButton onClick={infoClick} showInfo={showInfo} isEvidenceButton/>
       <div className="evidenceFormContainer">
         {evidence.map((evi, i) => {
           const isDisabled = numChecked >= 3 && !checkboxes[evi]

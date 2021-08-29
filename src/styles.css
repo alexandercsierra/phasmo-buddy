@@ -76,8 +76,9 @@ li{
 
 .evidenceWrapper {
   background: #14171c;
+  box-sizing: border-box;
   /* min-height: 100vh; */
-  padding: 20px;
+  padding: 8px;
   border-radius: 10px;
   /* margin: 5px; */
 }
@@ -100,7 +101,7 @@ li{
   flex-direction: column;
   align-items: flex-start; */
   /* margin-top: 30px; */
-  background: #606060;
+  background: #333333;
   color: white;
   /* flex-wrap: wrap; */
   padding: 10px;
@@ -136,8 +137,8 @@ li{
   flex-wrap: wrap;
   padding: 10px;
   border-radius: 10px;
-  height: 180px;
-  width: 280px;
+  height: 150px;
+  width: 320px;
 }
 
 .mapContainer {
@@ -162,7 +163,7 @@ li{
 .mapDiv {
   background: #14171c;
   border-radius: 10px;
-  padding: 25px;
+  padding: 15px;
 }
 
 .button {
@@ -297,18 +298,19 @@ select {
   box-sizing: border-box;
   background-color: "#dee5e8";
   border: none;
-  /* width: 100px; */
+  width: 150px;
 }
 
 .submitButton {
   box-sizing: border-box;
-  padding: 9.7px;
-  width: 70px;
+  padding: 9.1px;
+  width: 50px;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   margin: 0;
   background: #7A848F;
   color: white;
+  font-size: .75rem;
 }
 
 .submitButton:hover {

@@ -77,7 +77,15 @@ const Objectives = () => {
                 <div className="objectiveContainer">
                     {selectedObjectives.length ? (
                         selectedObjectives?.map(obj=>{
-                            return <p onClick={()=>toggleComplete(obj)} style={{textDecoration: completed?.includes(obj) ? 'line-through' : 'none', cursor:'pointer'}}>{obj}</p>
+                            return <p 
+                                onClick={()=>toggleComplete(obj)} 
+                                style={{
+                                    fontWeight: '700',
+                                    textDecoration: completed?.includes(obj) ? 'line-through' : 'none', 
+                                    color: completed?.includes(obj) ? '#21a31f' : 'inherit', 
+                                    cursor:'pointer'
+                                }}
+                            >{obj}</p>
                         })
                     ) : (
                         <p>no objectives selected</p>
@@ -85,15 +93,10 @@ const Objectives = () => {
                 </div>
             </div>
             <div>
-                <button 
+                <p 
+                    style={{textDecoration:'underline', cursor:'pointer'}}
                     onClick={handleOpen} 
-                    className="button"
-                    style={{
-                        padding: '5px',
-                        background: '#7A848F',
-                        color: 'white'
-                    }}
-                >{selectedObjectives?.length ? "reset objectives" : "set objectives"}</button>
+                    >{selectedObjectives?.length ? "reset objectives" : "set objectives"}</p>
             </div>
         </div>
     )

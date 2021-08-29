@@ -13,21 +13,21 @@ export default function App() {
       <div className="container w100">
           <div className="centered column hideOnMobile">
             <div style={{display:'flex', marginTop:'20px'}} className="w100">
-              <div className="centered evidenceWrapper">
+              <div className="evidenceWrapper" style={{display:'flex', justifyContent:'center'}}>
                 <Evidence
                   ghostInfo={ghostInfo}
                   setGhostInfo={setGhostInfo}
                 />
               </div>
-              <div className="evidenceWrapper centered" style={{marginLeft: "10px", padding: 0}}>
+              <div style={{marginLeft: "10px", padding: 0, display:'flex', justifyContent:'center', alignItems:'flex-start'}}>
                 <Maps />
               </div>
             </div>
             <div style={{display:'flex', marginTop:'20px'}} className="w100">
-              <div className="evidenceWrapper centered" style={{ width: '330px', padding: '25px', marginRight: "10px"}}>
+              {/* <div className="evidenceWrapper centered" style={{ width: '330px', padding: '25px', marginRight: "10px"}}>
                 <NameObjectives/>
-              </div>
-              <div className="centered evidenceWrapper hideOnMobile" style={{width:'350px'}}>
+              </div> */}
+              <div className="centered evidenceWrapper hideOnMobile" style={{width:'365px'}}>
                 <PhotoGuide/>
               </div>
             </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function InfoButton({showInfo, setShowInfo}) {
+function InfoButton({onClick, isEvidenceButton=false, showInfo=false}) {
     return (
         <>
             <div 
@@ -17,9 +17,9 @@ function InfoButton({showInfo, setShowInfo}) {
                 marginBottom:'10px',
                 fontWeight: 700
                 }}
-                onClick={()=>setShowInfo(!showInfo)}
+                onClick={onClick}
             >i</div>
-            {showInfo && <div>
+            {showInfo && isEvidenceButton && <div>
                 <p style={{marginTop:'30px'}}>click button once to mark as evidence, again to eliminate as evidence, and again to de-select</p>
             </div>}
         </>
