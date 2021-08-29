@@ -35,8 +35,8 @@ export default function App() {
 
 
 
-          <div className="centered column showOnMobile w100">
-            <div  className="w100 centered column">
+          <div className="centered column showOnMobile">
+            <div  className=" centered column">
               <div className="centered" style={{marginBottom: '10px'}}>
                 <Evidence
                   ghostInfo={ghostInfo}
@@ -50,7 +50,7 @@ export default function App() {
               {/* <div className="evidenceWrapper centered" style={{ width: '350px', padding: '25px', margin: '10px auto'}}>
                 <NameObjectives/>
               </div> */}
-              <div className="centered evidenceWrapper" style={{width:'100%', margin: '10px auto'}}>
+              <div className="centered evidenceWrapper" style={{width:'95%', margin: '10px auto'}}>
                 <PhotoGuide/>
               </div>
           </div>

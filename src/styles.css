@@ -1,5 +1,5 @@
 body {
-  /* min-width: fit-content; */
+  min-width: fit-content;
   /* max-width: 100%; */
   margin: 0;
 }
@@ -338,22 +338,22 @@ select {
   }
 
   .container {
-    flex-direction: column;
+    /* flex-direction: column; */
   }
   .evidenceContainer {
-    width: 100%;
+    /* width: 100%; */
   }
   .ghostList {
     /* width: 90%; */
-    margin: 10px auto;
+    /* margin: 10px auto; */
   }
   .mapContainer {
     margin-left: 0px;
-    margin-top: 40px;
+    /* margin-top: 40px; */
     padding: 0;
-    width: "100%";
+    /* width: "100%"; */
   }
-  .evidenceWrapper {
+  /* .evidenceWrapper {
     min-height: "inherit";
-  }
+  } */
 }
