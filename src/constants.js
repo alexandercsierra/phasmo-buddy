@@ -51,6 +51,7 @@ export const ghostVars = {
   obake: "obake",
   raiju: "raiju",
   twins: "twins",
+  onryo: "onryo",
 };
 
 const {
@@ -73,6 +74,7 @@ const {
   obake,
   raiju,
   twins,
+  onryo,
 } = ghostVars;
 const { emf, orbs, writing, freezing, spirit_box, fingerprints, dots } =
   evidenceVars;
@@ -108,13 +110,23 @@ export const evidenceMap = {
     obake,
     raiju,
     twins,
+    onryo,
   ],
   [writing]: [myling, demon, shade, revenant, mare, poltergeist, spirit],
   [dots]: [goryo, yokai, oni, yurei, banshee, phantom, wraith, raiju],
   [emf]: [myling, goryo, oni, shade, jinn, wraith, spirit, obake, raiju, twins],
-  [orbs]: [yokai, hantu, yurei, revenant, mare, banshee, obake, raiju],
-  [spirit_box]: [yokai, mare, poltergeist, phantom, wraith, spirit, twins],
-  [freezing]: [hantu, oni, yurei, demon, shade, revenant, jinn, twins],
+  [orbs]: [yokai, hantu, yurei, revenant, mare, banshee, obake, raiju, onryo],
+  [spirit_box]: [
+    yokai,
+    mare,
+    poltergeist,
+    phantom,
+    wraith,
+    spirit,
+    twins,
+    onryo,
+  ],
+  [freezing]: [hantu, oni, yurei, demon, shade, revenant, jinn, twins, onryo],
   [fingerprints]: [
     myling,
     goryo,
@@ -158,6 +170,7 @@ export const ghostMap = {
   obake: [emf, fingerprints, orbs],
   raiju: [emf, orbs, dots],
   twins: [emf, spirit_box, freezing],
+  onryo: [spirit_box, orbs, freezing],
 };
 
 export const ghostInfo = {
@@ -193,6 +206,8 @@ export const ghostInfo = {
     "A demon that thrives on electrical current, they siphon power from nearby electrical devices allowing them to move faster. They are constantly disrupting electrical equipment",
   [twins]:
     "Ghosts that mimic each other's actions. Will often interact with the environment at the same time.",
+  [onryo]:
+    "Fears any form of fire - extinguishing a flame can cause it to attack. When threatened, this ghost will be less likely to hunt",
 };
 
 export const maps = [

@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import GenericDialog from "./GenericDialog";
 
 const AlertModal = () => {
-  const sawUpdate = localStorage.getItem("nightmare-update-alert");
+  const sawUpdate = localStorage.getItem("nightmare-update-alert-oops");
   console.log({ sawUpdate });
   const [open, setOpen] = useState(!sawUpdate);
 
   const timeOutAlert = () => {
     return setTimeout(() => {
       setOpen(false);
-      localStorage.setItem("nightmare-update-alert", true);
+      localStorage.setItem("nightmare-update-alert-oops", true);
     }, 3000);
   };
 
@@ -28,7 +28,7 @@ const AlertModal = () => {
       handleClose={() => setOpen(false)}
       title="UPDATE"
     >
-      <p style={style}>Now with 3 new ghosts and campsite map</p>
+      <p style={style}>Now with 4 new ghosts and campsite map</p>
     </GenericDialog>
   );
 };
