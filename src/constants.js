@@ -241,4 +241,9 @@ export const maps = [
     url: "https://steamlists.com/wp-content/uploads/2021/04/Phasmophobia-Guide-to-asylum-steamlists-com.png",
     credit: "steamlists.com",
   },
+  {
+    name: "Maple Lodge Campsite",
+    url: "https://preview.redd.it/qm5u4ef95pv71.png?auto=webp&s=5aa5f885891fa234379c6fcb9269bb42eed852d0",
+    credit: "Jocelyngo - reddit.com/PhasmophobiaGame",
+  },
 ];
